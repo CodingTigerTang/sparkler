@@ -1,0 +1,56 @@
+---
+title: "Gallery of Effects"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Gallery of Effects}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(sparkler)
+```
+
+This gallery demonstrates the visual engines available in `sparkler`. These effects render using HTML5 Canvas.
+
+## 1. Weather Effects (Atmosphere)
+
+Use `sparkler::weather()` to create ambient backgrounds. By default in RMarkdown, these render in a contained box.
+
+### Snow
+```{r snow, echo=TRUE}
+sparkler::weather(type = "snow", density = 2, height = "300px")
+```
+
+### Rain
+```{r rain, echo=TRUE}
+sparkler::weather(type = "rain", density = 1, speed = 0.8, height = "300px")
+```
+
+### Meteors
+```{r meteor, echo=TRUE}
+sparkler::weather(type = "meteor", density = 1, height = "300px")
+```
+
+## 2. Celebration Effects
+
+These effects are typically triggered by events (like a button click in Shiny), but here we trigger them on page load.
+
+### Confetti
+```{r confetti, echo=TRUE}
+# This creates a burst of confetti inside this box
+sparkler::confetti(particle_count = 100, spread = 170)
+```
+
+### Fireworks
+```{r fireworks, echo=TRUE}
+# Fireworks run for a specific duration
+sparkler::fireworks(duration = 10, speed = 1)
+```

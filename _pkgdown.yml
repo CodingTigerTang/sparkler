@@ -1,0 +1,24 @@
+url: https://codingtigertang.github.io/sparkler
+template:
+  bootstrap: 5
+  bootswatch: cyborg
+
+
+home:
+  title: Sparkler
+  description: Visual Delight for R
+  sidebar:
+    structure: [links, license, community, authors, dev]
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [demo, github]
+  components:
+    demo:
+      text: "🎮 Live Demo"
+      href: https://tigertang.shinyapps.io/sparkler/
+    github:
+      icon: fa-github
+      href: https://github.com/CodingTigerTang/sparkler
+      aria-label: Source Code
