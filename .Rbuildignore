@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^dev$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
