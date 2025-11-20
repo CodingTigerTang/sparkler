@@ -80,20 +80,20 @@ shinyApp(ui, server)
 Sparkler works automatically in HTML documents. There are two distinct ways to use the **Weather** effect in reports.
 
 ### Mode 1: The "Atmospheric Overlay" (Fullscreen)
+
 This makes the rain or snow cover the **entire webpage**, scrolling with the user. Perfect for immersive reports.
 
-```markdown
 ```{r echo=FALSE}
 library(sparkler)
 # The 'fullscreen = TRUE' argument forces the overlay
 sparkler::weather(type = "snow", density = 2, fullscreen = TRUE)
 ```
-```
 
 ### Mode 2: The "Visual Block" (Inline)
+
 If you leave `fullscreen` as `NULL` or `FALSE`, the weather renders inside a specific box, behaving like a standard plot.
 
-```markdown
+````
 ## Storm Analysis
 Here is a visualization of the storm intensity:
 
@@ -101,7 +101,7 @@ Here is a visualization of the storm intensity:
 # This creates a 300px box with rain inside it
 sparkler::weather(type = "rain", speed = 2, height = "300px")
 ```
-```
+````
 
 ## 🎛 API Reference & Controls
 
