@@ -2,6 +2,8 @@
 % Please edit documentation in R/fireworks.R
 \name{fireworks}
 \alias{fireworks}
+\alias{fireworksOutput}
+\alias{renderFireworks}
 \title{Launch Fireworks}
 \usage{
 fireworks(
@@ -11,15 +13,29 @@ fireworks(
   height = "0px",
   elementId = NULL
 )
+
+fireworksOutput(outputId, width = "100\%", height = "0px")
+
+renderFireworks(expr, env = parent.frame(), quoted = FALSE)
 }
 \arguments{
-\item{duration}{Number of seconds to run. Default is 5.}
+\item{duration}{Number of seconds to run (default 5).}
 
 \item{speed}{Number. Speed of simulation (default 1).}
 
-\item{width, height}{Must be valid CSS unit. Leave as default for overlay.}
+\item{width}{Must be a valid CSS unit (like '100\%', '400px', 'auto') or a number.}
+
+\item{height}{Must be a valid CSS unit (like '100\%', '400px', 'auto') or a number.}
 
 \item{elementId}{Optional ID.}
+
+\item{outputId}{output variable to read from}
+
+\item{expr}{An expression that generates fireworks}
+
+\item{env}{The environment in which to evaluate \code{expr}.}
+
+\item{quoted}{Is \code{expr} a quoted expression?}
 }
 \description{
 Triggers a fireworks display on screen.

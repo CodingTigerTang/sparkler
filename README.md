@@ -24,7 +24,13 @@ devtools::install_github("CodingTigerTang/sparkler")
 
 ## 🎮 Interactive Demo
 
-The best way to understand the package is to run the built-in dashboard, which lets you control every parameter interactively.
+### Option 1: Try it Online
+
+Click the image below to launch the live demo app.
+
+[![Launch Live Demo](img/demo.gif)](https://tigertang.shinyapps.io/sparkler/)
+
+### Option 2: Run Locally
 
 ```r
 library(sparkler)
@@ -55,7 +61,7 @@ sparkler::weather(type = "snow")
 <img src="img/snow-r-console.gif" width="50%">
 
 ```r
-# Fireworks!!
+# Fireworks!
 sparkler::fireworks()
 ```
 <img src="img/fireworks-r-console.gif" width="50%">

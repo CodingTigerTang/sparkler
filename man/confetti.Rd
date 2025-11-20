@@ -2,16 +2,41 @@
 % Please edit documentation in R/confetti.R
 \name{confetti}
 \alias{confetti}
+\alias{confettiOutput}
+\alias{renderConfetti}
 \title{Launch Confetti}
 \usage{
 confetti(
   particle_count = 100,
   spread = 70,
-  width = "100\%",
-  height = "400px",
+  width = NULL,
+  height = NULL,
   elementId = NULL
 )
+
+confettiOutput(outputId, width = "100\%", height = "0px")
+
+renderConfetti(expr, env = parent.frame(), quoted = FALSE)
+}
+\arguments{
+\item{particle_count}{Integer. Number of particles to fire (default 150).}
+
+\item{spread}{Integer. How wide the explosion is in degrees (default 100).}
+
+\item{width}{Must be a valid CSS unit (like '100\%', '400px', 'auto') or a number.}
+
+\item{height}{Must be a valid CSS unit (like '100\%', '400px', 'auto') or a number.}
+
+\item{elementId}{Use an explicit element ID for the widget (optional).}
+
+\item{outputId}{output variable to read from}
+
+\item{expr}{An expression that generates a confetti}
+
+\item{env}{The environment in which to evaluate \code{expr}.}
+
+\item{quoted}{Is \code{expr} a quoted expression (with \code{quote()})?}
 }
 \description{
-Launch Confetti
+Triggers a confetti explosion on the screen.
 }

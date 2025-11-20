@@ -6,6 +6,8 @@
 #' @param density Numeric. Multiplier for particle count (default 1).
 #' @param speed Numeric. Multiplier for movement speed (default 1).
 #' @param fullscreen Logical. If TRUE, forces the effect to cover the whole page (useful for RMarkdown). If NULL (default), it auto-detects if you are in Shiny.
+#' @param width Must be a valid CSS unit (like '100%', '400px', 'auto') or a number.
+#' @param height Must be a valid CSS unit (like '100%', '400px', 'auto') or a number.
 #' @param elementId Optional ID.
 #'
 #' @import htmlwidgets
@@ -42,11 +44,19 @@ weather <- function(type = "snow", density = 1, speed = 1, fullscreen = NULL, wi
   )
 }
 
+#' @rdname weather
+#' @param outputId output variable to read from
+#' @param width Must be a valid CSS unit (like '100%', '400px', 'auto') or a number.
+#' @param height Must be a valid CSS unit (like '100%', '400px', 'auto') or a number.
 #' @export
 weatherOutput <- function(outputId, width = '100%', height = '0px'){
   htmlwidgets::shinyWidgetOutput(outputId, 'weather', width, height, package = 'sparkler')
 }
 
+#' @rdname weather
+#' @param expr An expression that generates weather
+#' @param env The environment in which to evaluate \code{expr}.
+#' @param quoted Is \code{expr} a quoted expression?
 #' @export
 renderWeather <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) }

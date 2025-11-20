@@ -2,26 +2,47 @@
 % Please edit documentation in R/weather.R
 \name{weather}
 \alias{weather}
+\alias{weatherOutput}
+\alias{renderWeather}
 \title{Start Weather Effect}
 \usage{
 weather(
   type = "snow",
   density = 1,
   speed = 1,
+  fullscreen = NULL,
   width = NULL,
   height = NULL,
   elementId = NULL
 )
+
+weatherOutput(outputId, width = "100\%", height = "0px")
+
+renderWeather(expr, env = parent.frame(), quoted = FALSE)
 }
 \arguments{
-\item{type}{Character. One of "snow", "rain", "meteor", or "none".}
+\item{type}{Character. One of "snow", "rain", "meteor", or "none" (to stop the effect).}
 
 \item{density}{Numeric. Multiplier for particle count (default 1).}
 
 \item{speed}{Numeric. Multiplier for movement speed (default 1).}
 
+\item{fullscreen}{Logical. If TRUE, forces the effect to cover the whole page (useful for RMarkdown). If NULL (default), it auto-detects if you are in Shiny.}
+
+\item{width}{Must be a valid CSS unit (like '100\%', '400px', 'auto') or a number.}
+
+\item{height}{Must be a valid CSS unit (like '100\%', '400px', 'auto') or a number.}
+
 \item{elementId}{Optional ID.}
+
+\item{outputId}{output variable to read from}
+
+\item{expr}{An expression that generates weather}
+
+\item{env}{The environment in which to evaluate \code{expr}.}
+
+\item{quoted}{Is \code{expr} a quoted expression?}
 }
 \description{
-Start Weather Effect
+Adds a full-screen overlay of rain, snow, or meteors to the Shiny app or RMarkdown document.
 }
