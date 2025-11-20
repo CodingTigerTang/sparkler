@@ -1,0 +1,5 @@
+dependencies:
+  - name: fireworks-js
+    version: 2.10.0
+    src: "htmlwidgets/lib/fireworks-js"
+    script: index.umd.js

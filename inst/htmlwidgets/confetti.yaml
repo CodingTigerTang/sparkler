@@ -1,0 +1,5 @@
+dependencies:
+  - name: canvas-confetti
+    version: 1.6.0
+    src: "htmlwidgets/lib/canvas-confetti"
+    script: confetti.browser.min.js
