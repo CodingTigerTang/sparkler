@@ -6,7 +6,7 @@
 
 **Sparkler** is an R package designed to bridge the gap between data science and user delight. While R is excellent for statistics and charts, it often lacks the "micro-interactions" and "gamification" elements found in modern web development.
 
-**Sparkler** solves this by providing lightweight, high-performance visual engine: **Confetti**, **Fireworks**, and **Atmospheric Weather**, which render as full-screen overlays on top of your Shiny apps and RMarkdown documents.
+**Sparkler** solves this by providing lightweight, high-performance visual engines: **Confetti**, **Fireworks**, and **Atmospheric Weather**, which render as full-screen overlays on top of your Shiny apps and RMarkdown documents.
 
 ### Why use Sparkler?
 * **Gamification:** Reward users with confetti when they submit a form or hit a target.
@@ -22,7 +22,7 @@ You can install the development version from GitHub:
 devtools::install_github("CodingTigerTang/sparkler")
 ```
 
-## 🎮 Quick Start
+## 🎮 Interactive Demo
 
 The best way to understand the package is to run the built-in dashboard, which lets you control every parameter interactively.
 
@@ -30,6 +30,35 @@ The best way to understand the package is to run the built-in dashboard, which l
 library(sparkler)
 sparkler::run_demo()
 ```
+
+## 🖥️ Running in R Console
+
+You don't need Shiny to see the magic! You can run these functions directly in your R console to test them. They will render inside the **RStudio Viewer** pane."
+
+```r
+# Pop some confetti in the viewer
+sparkler::confetti()
+```
+<img src="img/confetti-r-console.gif" width="50%">
+
+```r
+# Watch a meteor shower
+# Note: In the console, weather renders with a dark background so particles are visible.
+sparkler::weather(type = "meteor")
+```
+<img src="img/meteor-r-console.gif" width="50%">
+
+```r
+# Snowy day
+sparkler::weather(type = "snow")
+```
+<img src="img/snow-r-console.gif" width="50%">
+
+```r
+# Fireworks!!
+sparkler::fireworks()
+```
+<img src="img/fireworks-r-console.gif" width="50%">
 
 ## 💻 How to Use in Shiny
 
@@ -80,17 +109,17 @@ shinyApp(ui, server)
 Sparkler works automatically in HTML documents. There are two distinct ways to use the **Weather** effect in reports.
 
 ### Mode 1: The "Atmospheric Overlay" (Fullscreen)
-
 This makes the rain or snow cover the **entire webpage**, scrolling with the user. Perfect for immersive reports.
 
+````
 ```{r echo=FALSE}
 library(sparkler)
 # The 'fullscreen = TRUE' argument forces the overlay
 sparkler::weather(type = "snow", density = 2, fullscreen = TRUE)
 ```
+````
 
 ### Mode 2: The "Visual Block" (Inline)
-
 If you leave `fullscreen` as `NULL` or `FALSE`, the weather renders inside a specific box, behaving like a standard plot.
 
 ````
