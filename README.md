@@ -8,7 +8,6 @@
 </div>
 
 [![R-CMD-check](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml)
-
 [![R-Universe](https://codingtigertang.r-universe.dev/badges/sparkler)](https://codingtigertang.r-universe.dev)
 
 **Sparkler** is an R package designed to bring joy, delight, and
