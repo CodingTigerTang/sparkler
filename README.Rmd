@@ -18,7 +18,6 @@ knitr::opts_chunk$set(
 <div>
   <img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental">
 </div>
-
 [![R-CMD-check](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml)
 [![R-Universe](https://codingtigertang.r-universe.dev/badges/sparkler)](https://codingtigertang.r-universe.dev)
 
