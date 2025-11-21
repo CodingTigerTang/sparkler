@@ -21,6 +21,8 @@ knitr::opts_chunk$set(
 
 [![R-CMD-check](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml)
 
+[![R-Universe](https://codingtigertang.r-universe.dev/badges/sparkler)](https://codingtigertang.r-universe.dev)
+
 **Sparkler** is an R package designed to bring joy, delight, and atmosphere to your Shiny apps, RMarkdown documents, and Quarto presentations.
 
 **Sparkler** solves this by providing lightweight, high-performance visual engines: **Confetti**, **Fireworks**, and **Atmospheric Weather**. These render as full-screen overlays on top of your Shiny apps and RMarkdown documents.
