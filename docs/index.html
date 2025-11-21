@@ -55,6 +55,7 @@
 <div>
 <p><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></p>
 </div>
+<p><a href="https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></p>
 <p><strong>Sparkler</strong> is an R package designed to bring joy, delight, and atmosphere to your Shiny apps, RMarkdown documents, and Quarto presentations.</p>
 <p><strong>Sparkler</strong> solves this by providing lightweight, high-performance visual engines: <strong>Confetti</strong>, <strong>Fireworks</strong>, and <strong>Atmospheric Weather</strong>. These render as full-screen overlays on top of your Shiny apps and RMarkdown documents.</p>
 <div class="section level3">
@@ -72,8 +73,11 @@
 <div class="section level2">
 <h2 id="id_-installation">📦 Installation<a class="anchor" aria-label="anchor" href="#id_-installation"></a>
 </h2>
-<p>You can install the development version from GitHub:</p>
+<p>You can install the package directly from <strong>R-Universe</strong>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"sparkler"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://codingtigertang.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>Alternatively, you can install the development version from GitHub:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"CodingTigerTang/sparkler"</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -89,7 +93,7 @@
 <div class="section level3">
 <h3 id="option-2-run-locally">Option 2: Run Locally<a class="anchor" aria-label="anchor" href="#option-2-run-locally"></a>
 </h3>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://codingtigertang.github.io/sparkler">sparkler</a></span><span class="op">)</span></span>
 <span><span class="fu">sparkler</span><span class="fu">::</span><span class="fu"><a href="reference/run_demo.html">run_demo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -102,7 +106,7 @@
 <h3 id="id_1-confetti">1. Confetti<a class="anchor" aria-label="anchor" href="#id_1-confetti"></a>
 </h3>
 <p>Best for instant feedback (buttons, success messages).</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Pop some confetti in the viewer</span></span>
 <span><span class="fu">sparkler</span><span class="fu">::</span><span class="fu"><a href="reference/confetti.html">confetti</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/confetti-r-console.gif" width="50%" alt="Confetti Example in R Console"></p>
@@ -111,7 +115,7 @@
 <h3 id="id_2-fireworks">2. Fireworks<a class="anchor" aria-label="anchor" href="#id_2-fireworks"></a>
 </h3>
 <p>Best for major milestones. Runs for a set duration.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Launch a fireworks show</span></span>
 <span><span class="fu">sparkler</span><span class="fu">::</span><span class="fu"><a href="reference/fireworks.html">fireworks</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/fireworks-r-console.gif" width="50%" alt="Fireworks Example in R Console"></p>
@@ -120,12 +124,12 @@
 <h3 id="id_3-atmospheric-weather">3. Atmospheric Weather<a class="anchor" aria-label="anchor" href="#id_3-atmospheric-weather"></a>
 </h3>
 <p>Continuous effects (snow, rain, meteors).</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Watch a meteor shower</span></span>
 <span><span class="co"># Note: In the console, weather renders with a dark background so particles are visible.</span></span>
 <span><span class="fu">sparkler</span><span class="fu">::</span><span class="fu"><a href="reference/weather.html">weather</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"meteor"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/meteor-r-console.gif" width="50%" alt="Meteor Example in R Console"></p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Snowy day</span></span>
 <span><span class="fu">sparkler</span><span class="fu">::</span><span class="fu"><a href="reference/weather.html">weather</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"snow"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/snow-r-console.gif" width="50%" alt="Snow Example in R Console"></p>
@@ -139,7 +143,7 @@
 <div class="section level3">
 <h3 id="minimal-shiny-example">Minimal Shiny Example<a class="anchor" aria-label="anchor" href="#minimal-shiny-example"></a>
 </h3>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://shiny.posit.co/" class="external-link">shiny</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://codingtigertang.github.io/sparkler">sparkler</a></span><span class="op">)</span></span>
 <span></span>
@@ -175,7 +179,7 @@
 <h3 id="mode-1-the-atmospheric-overlay-fullscreen">Mode 1: The “Atmospheric Overlay” (Fullscreen)<a class="anchor" aria-label="anchor" href="#mode-1-the-atmospheric-overlay-fullscreen"></a>
 </h3>
 <p>This makes the rain or snow cover the <strong>entire webpage</strong>, scrolling with the user. Perfect for immersive reports.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://codingtigertang.github.io/sparkler">sparkler</a></span><span class="op">)</span></span>
 <span><span class="co"># The 'fullscreen = TRUE' argument forces the overlay</span></span>
 <span><span class="fu">sparkler</span><span class="fu">::</span><span class="fu"><a href="reference/weather.html">weather</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"snow"</span>, density <span class="op">=</span> <span class="fl">2</span>, fullscreen <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
@@ -184,7 +188,7 @@
 <h3 id="mode-2-the-visual-block-inline">Mode 2: The “Visual Block” (Inline)<a class="anchor" aria-label="anchor" href="#mode-2-the-visual-block-inline"></a>
 </h3>
 <p>If you leave <code>fullscreen</code> as <code>NULL</code> or <code>FALSE</code>, the weather renders inside a specific box, behaving like a standard plot.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># This creates a 300px box with rain inside it</span></span>
 <span><span class="fu">sparkler</span><span class="fu">::</span><span class="fu"><a href="reference/weather.html">weather</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"rain"</span>, speed <span class="op">=</span> <span class="fl">2</span>, height <span class="op">=</span> <span class="st">"300px"</span><span class="op">)</span></span></code></pre></div>
 </div>

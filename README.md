@@ -7,6 +7,8 @@
 
 </div>
 
+[![R-CMD-check](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml)
+
 **Sparkler** is an R package designed to bring joy, delight, and
 atmosphere to your Shiny apps, RMarkdown documents, and Quarto
 presentations.
@@ -28,7 +30,13 @@ apps and RMarkdown documents.
 
 ## 📦 Installation
 
-You can install the development version from GitHub:
+You can install the package directly from **R-Universe**:
+
+``` r
+install.packages("sparkler", repos = c("https://codingtigertang.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+Alternatively, you can install the development version from GitHub:
 
 ``` r
 # install.packages("devtools")

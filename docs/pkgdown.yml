@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   gallery: gallery.html
-last_built: 2025-11-20T21:27Z
+last_built: 2025-11-21T17:56Z
 urls:
   reference: https://codingtigertang.github.io/sparkler/reference
   article: https://codingtigertang.github.io/sparkler/articles
