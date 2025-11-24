@@ -36,7 +36,7 @@ ui <- fluidPage(
            wellPanel(
              h4("🚀 Fireworks", style = "margin-top: 0;"),
              sliderInput("fw_duration", "Duration (Sec):", min = 1, max = 10, value = 3),
-             sliderInput("fw_speed", "Speed Multiplier:", min = 0.5, max = 3, value = 1, step = 0.5),
+             sliderInput("fw_speed", "Speed Multiplier:", min = 0.5, max = 3, value = 1, step = 0.1),
              actionButton("btn_fw", "Launch Fireworks", width = "100%",
                           style = "background-color: #dc3545; color: white; border: none;")
            )
