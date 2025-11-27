@@ -1,5 +1,5 @@
 
-<img src="man/figures/logo.png" alt="sparkler package logo" align="right" height="138"/>
+<img src="man/figures/sparkler_logo.png" alt="sparkler package logo" align="right" height="138"/>
 
 # 🎇 Sparkler: Visual Delight for R
 
