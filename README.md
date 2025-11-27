@@ -1,4 +1,6 @@
 
+<img src="man/figures/logo.png" alt="sparkler package logo" align="right" height="138"/>
+
 # 🎇 Sparkler: Visual Delight for R
 
 [![Lifecycle:
@@ -71,7 +73,7 @@ Best for instant feedback (buttons, success messages).
 sparkler::confetti()
 ```
 
-<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/confetti-r-console.gif" width="50%" alt="Confetti Example in R Console">
+<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/confetti-r-console.gif" alt="Confetti Example in R Console" width="50%"/>
 
 ### 2. Fireworks
 
@@ -82,7 +84,7 @@ Best for major milestones. Runs for a set duration.
 sparkler::fireworks()
 ```
 
-<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/fireworks-r-console.gif" width="50%" alt="Fireworks Example in R Console">
+<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/fireworks-r-console.gif" alt="Fireworks Example in R Console" width="50%"/>
 
 ### 3. Atmospheric Weather
 
@@ -94,14 +96,14 @@ Continuous effects (snow, rain, meteors).
 sparkler::weather(type = "meteor")
 ```
 
-<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/meteor-r-console.gif" width="50%" alt="Meteor Example in R Console">
+<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/meteor-r-console.gif" alt="Meteor Example in R Console" width="50%"/>
 
 ``` r
 # Snowy day
 sparkler::weather(type = "snow")
 ```
 
-<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/snow-r-console.gif" width="50%" alt="Snow Example in R Console">
+<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/snow-r-console.gif" alt="Snow Example in R Console" width="50%"/>
 
 ## 💻 How to Use in Shiny
 

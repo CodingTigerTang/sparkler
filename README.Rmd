@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-
+<img src="man/figures/logo.png" alt="sparkler package logo" align="right" height="138"/>
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -15,30 +15,29 @@ knitr::opts_chunk$set(
 
 # 🎇 Sparkler: Visual Delight for R
 
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml)
-[![R-Universe](https://codingtigertang.r-universe.dev/badges/sparkler)](https://codingtigertang.r-universe.dev)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![R-CMD-check](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CodingTigerTang/sparkler/actions/workflows/R-CMD-check.yaml) [![R-Universe](https://codingtigertang.r-universe.dev/badges/sparkler)](https://codingtigertang.r-universe.dev)
 
 **Sparkler** is an R package designed to bring joy, delight, and atmosphere to your Shiny apps, RMarkdown documents, and Quarto presentations.
 
 **Sparkler** solves this by providing lightweight, high-performance visual engines: **Confetti**, **Fireworks**, and **Atmospheric Weather**. These render as full-screen overlays on top of your Shiny apps and RMarkdown documents.
 
 ### Why use Sparkler?
-* **Gamification:** Reward users with confetti when they submit a form or hit a target.
-* **Storytelling:** Use rain, snow, or meteors to set the mood for your data narrative.
-* **Zero-Footprint:** The effects use a custom **Overlay Architecture** (Z-index 9999), meaning they float *over* your app without breaking your Bootstrap layout or blocking mouse clicks.
+
+-   **Gamification:** Reward users with confetti when they submit a form or hit a target.
+-   **Storytelling:** Use rain, snow, or meteors to set the mood for your data narrative.
+-   **Zero-Footprint:** The effects use a custom **Overlay Architecture** (Z-index 9999), meaning they float *over* your app without breaking your Bootstrap layout or blocking mouse clicks.
 
 ## 📦 Installation
 
 You can install the package directly from **R-Universe**:
 
-```r
+``` r
 install.packages("sparkler", repos = c("https://codingtigertang.r-universe.dev", "https://cloud.r-project.org"))
 ```
 
 Alternatively, you can install the development version from GitHub:
 
-```r
+``` r
 # install.packages("devtools")
 devtools::install_github("CodingTigerTang/sparkler")
 ```
@@ -53,44 +52,55 @@ Click the image below to launch the live demo app.
 
 ### Option 2: Run Locally
 
-```r
+``` r
 library(sparkler)
 sparkler::run_demo()
 ```
 
 ## 🖥️ Running in R Console
+
 You don't need Shiny to see the magic! You can run these functions directly in your R console to test them. They will render inside the **RStudio Viewer** pane.
 
 ### 1. Confetti
+
 Best for instant feedback (buttons, success messages).
-```r
+
+``` r
 # Pop some confetti in the viewer
 sparkler::confetti()
 ```
-<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/confetti-r-console.gif" width="50%" alt="Confetti Example in R Console">
+
+<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/confetti-r-console.gif" alt="Confetti Example in R Console" width="50%"/>
 
 ### 2. Fireworks
+
 Best for major milestones. Runs for a set duration.
-```r
+
+``` r
 # Launch a fireworks show
 sparkler::fireworks()
 ```
-<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/fireworks-r-console.gif" width="50%" alt="Fireworks Example in R Console">
+
+<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/fireworks-r-console.gif" alt="Fireworks Example in R Console" width="50%"/>
 
 ### 3. Atmospheric Weather
+
 Continuous effects (snow, rain, meteors).
-```r
+
+``` r
 # Watch a meteor shower
 # Note: In the console, weather renders with a dark background so particles are visible.
 sparkler::weather(type = "meteor")
 ```
-<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/meteor-r-console.gif" width="50%" alt="Meteor Example in R Console">
 
-```r
+<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/meteor-r-console.gif" alt="Meteor Example in R Console" width="50%"/>
+
+``` r
 # Snowy day
 sparkler::weather(type = "snow")
 ```
-<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/snow-r-console.gif" width="50%" alt="Snow Example in R Console">
+
+<img src="https://raw.githubusercontent.com/CodingTigerTang/sparkler/main/man/figures/snow-r-console.gif" alt="Snow Example in R Console" width="50%"/>
 
 ## 💻 How to Use in Shiny
 
@@ -100,7 +110,7 @@ Using Sparkler in Shiny requires a slightly different mental model than standard
 
 ### Minimal Shiny Example
 
-```r
+``` r
 library(shiny)
 library(sparkler)
 
@@ -133,6 +143,7 @@ shinyApp(ui, server)
 Sparkler works automatically in HTML documents. There are two distinct ways to use the **Weather** effect in reports.
 
 ### Mode 1: The "Atmospheric Overlay" (Fullscreen)
+
 This makes the rain or snow cover the **entire webpage**, scrolling with the user. Perfect for immersive reports.
 
 ```{r rmd1, eval=FALSE}
@@ -142,8 +153,8 @@ sparkler::weather(type = "snow", density = 2, fullscreen = TRUE)
 ```
 
 ### Mode 2: The "Visual Block" (Inline)
-If you leave `fullscreen` as `NULL` or `FALSE`, the weather renders inside a specific box, behaving like a standard plot.
 
+If you leave `fullscreen` as `NULL` or `FALSE`, the weather renders inside a specific box, behaving like a standard plot.
 
 ```{r rmd2, eval=FALSE}
 # This creates a 300px box with rain inside it
@@ -155,16 +166,16 @@ sparkler::weather(type = "rain", speed = 2, height = "300px")
 This package utilizes the following open-source assets:
 
 ### JavaScript Libraries
-1. **canvas-confetti**
-   * **Author:** Kiril Vatev (catdad)
-   * **License:** ISC
-   * **Source:** [https://github.com/catdad/canvas-confetti](https://github.com/catdad/canvas-confetti)
 
-2. **fireworks-js**
-   * **Author:** Vitalij Ryndin (crashmax-dev)
-   * **License:** MIT
-   * **Source:** [https://github.com/crashmax-dev/fireworks-js](https://github.com/crashmax-dev/fireworks-js)
+1.  **canvas-confetti**
+    -   **Author:** Kiril Vatev (catdad)
+    -   **License:** ISC
+    -   **Source:** <https://github.com/catdad/canvas-confetti>
+2.  **fireworks-js**
+    -   **Author:** Vitalij Ryndin (crashmax-dev)
+    -   **License:** MIT
+    -   **Source:** <https://github.com/crashmax-dev/fireworks-js>
 
----
+------------------------------------------------------------------------
 
 Created with ❤️ using `htmlwidgets`.
