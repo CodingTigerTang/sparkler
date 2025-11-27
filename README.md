@@ -1,7 +1,5 @@
 
-<img src="man/figures/sparkler_logo.png" alt="sparkler package logo" align="right" height="138"/>
-
-# 🎇 Sparkler: Visual Delight for R
+# 🎇 Sparkler: Visual Delight for R<img src="man/figures/sparkler_logo.png" alt="sparkler package logo" align="right" height="138"/>
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
