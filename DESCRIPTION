@@ -3,7 +3,7 @@ Title: Visual Effects and Atmospheric Overlays for 'Shiny' and 'R Markdown'
 Version: 0.1.1
 Authors@R: 
     person("Tiger", "Tang", email = "tigerloveslobsters@gmail.com", role = c("aut", "cre"))
-Description: Enhance user experience in Shiny applications, R Markdown reports, and Quarto presentations by adding elements of gamification and visual delight. 'sparkler' provides lightweight 'htmlwidgets' to trigger celebratory effects (confetti, fireworks) for user rewards, or atmospheric overlays (snow, rain, meteors) for data storytelling. All effects render as fixed, full-screen layers on top of the application without disrupting the underlying layout or pointer events.
+Description: Add lightweight visual effects to Shiny applications, R Markdown documents, and Quarto presentations using htmlwidgets. The package includes celebratory effects such as confetti and fireworks, along with atmospheric effects such as snow, rain, and meteors. Effects can be used as full-screen overlays or, for selected effects, within contained regions for storytelling, highlighting, and presentation design.
 License: GPL (>= 3)
 URL:  https://codingtigertang.github.io/sparkler, https://github.com/CodingTigerTang/sparkler 
 BugReports: https://github.com/CodingTigerTang/sparkler/issues
