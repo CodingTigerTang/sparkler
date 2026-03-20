@@ -44,5 +44,5 @@ renderWeather(expr, env = parent.frame(), quoted = FALSE)
 \item{quoted}{Is \code{expr} a quoted expression?}
 }
 \description{
-Adds a full-screen overlay of rain, snow, or meteors to the Shiny app or RMarkdown document.
+Adds a full-screen overlay of rain, snow, or meteors to the Shiny app or Quarto/RMarkdown document.
 }

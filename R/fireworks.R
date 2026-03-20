@@ -1,6 +1,6 @@
 #' Launch Fireworks
 #'
-#' Triggers a fireworks display on screen.
+#' Triggers a fireworks display to the Shiny app or Quarto/RMarkdown document.
 #'
 #' @param duration Number of seconds to run (default 5).
 #' @param speed Number. Speed of simulation (default 1).

@@ -38,5 +38,5 @@ renderConfetti(expr, env = parent.frame(), quoted = FALSE)
 \item{quoted}{Is \code{expr} a quoted expression (with \code{quote()})?}
 }
 \description{
-Triggers a confetti explosion on the screen.
+Triggers a confetti explosion to the Shiny app or Quarto/RMarkdown document.
 }

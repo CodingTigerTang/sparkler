@@ -1,6 +1,6 @@
 #' Start Weather Effect
 #'
-#' Adds a full-screen overlay of rain, snow, or meteors to the Shiny app or RMarkdown document.
+#' Adds a full-screen overlay of rain, snow, or meteors to the Shiny app or Quarto/RMarkdown document.
 #'
 #' @param type Character. One of "snow", "rain", "meteor", or "none" (to stop the effect).
 #' @param density Numeric. Multiplier for particle count (default 1).

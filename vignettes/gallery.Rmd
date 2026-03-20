@@ -18,39 +18,57 @@ knitr::opts_chunk$set(
 library(sparkler)
 ```
 
-This gallery demonstrates the visual engines available in `sparkler`. These effects render using HTML5 Canvas.
+This vignette demonstrates the visual effects available in `sparkler`.
 
-## 1. Weather Effects (Atmosphere)
+The package includes two types of effects:
 
-Use `sparkler::weather()` to create ambient backgrounds. By default in RMarkdown, these render in a contained box.
+-   weather effects such as snow, rain, and meteors, which can be rendered inline or as a full-screen overlay
+
+-   celebration effects such as confetti and fireworks, which are typically used as overlays in presentations, dashboards, and Shiny apps
+
+These effects are rendered using HTML5 Canvas.
+
+## Weather effects
+
+Use `sparkler::weather()` to create ambient backgrounds. By default in R Markdown, these render in a contained box.
 
 ### Snow
+
 ```{r snow, echo=TRUE}
-sparkler::weather(type = "snow", density = 2, height = "300px")
+sparkler::weather(type = "snow", density = 2, fullscreen = FALSE, height = "300px")
 ```
 
 ### Rain
+
 ```{r rain, echo=TRUE}
 sparkler::weather(type = "rain", density = 1, speed = 0.8, height = "300px")
 ```
 
 ### Meteors
+
 ```{r meteor, echo=TRUE}
 sparkler::weather(type = "meteor", density = 1, height = "300px")
 ```
 
-## 2. Celebration Effects
+## Celebration effects
 
-These effects are typically triggered by events (like a button click in Shiny), but here we trigger them on page load.
+`confetti()` and `fireworks()` are designed primarily for celebratory overlays. In documents, they are triggered when the widget is rendered. In presentation formats such as Quarto revealjs, they are especially useful on slides where the effect should appear when the slide becomes active.
 
 ### Confetti
+
 ```{r confetti, echo=TRUE}
-# This creates a burst of confetti inside this box
 sparkler::confetti(particle_count = 100, spread = 170)
 ```
 
 ### Fireworks
+
 ```{r fireworks, echo=TRUE}
-# Fireworks run for a specific duration
 sparkler::fireworks(duration = 10, speed = 1)
 ```
+
+## Notes on usage
+
+-   Use `weather(..., fullscreen = FALSE)` when you want the effect contained inside a region of the page.
+-   Use `weather(..., fullscreen = TRUE)` when you want a full-screen overlay. A dark background is recommended so the effect is easier to see.
+-   `confetti()` and `fireworks()` are best suited to presentations and interactive applications such as Shiny.
+-   In Quarto/R Markdown revealjs presentations, celebration effects can be placed on a slide and triggered when that slide becomes active.

@@ -38,5 +38,5 @@ renderFireworks(expr, env = parent.frame(), quoted = FALSE)
 \item{quoted}{Is \code{expr} a quoted expression?}
 }
 \description{
-Triggers a fireworks display on screen.
+Triggers a fireworks display to the Shiny app or Quarto/RMarkdown document.
 }

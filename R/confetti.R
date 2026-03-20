@@ -1,6 +1,6 @@
 #' Launch Confetti
 #'
-#' Triggers a confetti explosion on the screen.
+#' Triggers a confetti explosion to the Shiny app or Quarto/RMarkdown document.
 #'
 #' @param particle_count Integer. Number of particles to fire (default 150).
 #' @param spread Integer. How wide the explosion is in degrees (default 100).
